@@ -19,8 +19,8 @@ public class Inventory : Action
         foreach (Item item in controller.player.inventory)
         {
             if (!first)
-                result += ", "; // Add a comma and space before the next item
-            result += (first ? "" : " and ") + "a " + item.itemName;
+                result += ",";                                             // Add a comma and space before the next item
+            result += (first ? "" : " and ") + (item.itemName == "coins"?"the " : "a ") + item.itemName;
             first = false;
         }
 
