@@ -14,14 +14,14 @@ public class Inventory : Action
         }
 
         string result = "You have ";
-        bool first = false;
+        bool first = true;
 
         foreach (Item item in controller.player.inventory)
         {
-            if (first)
+            if (!first)
                 result += ", "; // Add a comma and space before the next item
-            result += (first ? "a " : " and a ") + item.itemName;
-            first = true;
+            result += (first ? "" : " and ") + "a " + item.itemName;
+            first = false;
         }
 
         controller.currentText.text = result;
