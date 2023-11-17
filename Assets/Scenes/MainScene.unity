@@ -226,8 +226,8 @@ MonoBehaviour:
   - {fileID: 1636650072}
   itemList:
   - {fileID: 1139346439}
-  - {fileID: 1753547756}
-  - {fileID: 1981945292}
+  - {fileID: 1909087604}
+  - {fileID: 267686100}
 --- !u!1 &155485870
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +338,65 @@ MonoBehaviour:
   - {fileID: 1807299281}
   - {fileID: 510950221}
   itemList: []
+--- !u!1 &267686098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267686099}
+  - component: {fileID: 267686100}
+  m_Layer: 0
+  m_Name: Ferryman3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &267686099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267686098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 390738217}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &267686100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267686098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: ferryman
+  description: a robed ferryman
+  playerCanTake: 0
+  itemEnabled: 0
+  targetItem: {fileID: 0}
+  interactions:
+  - action: {fileID: 11400000, guid: a4e52ac8feae79941b845b884820ab68, type: 2}
+    response: Give me payment
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  playerCanTalkTo: 1
 --- !u!1 &268606350
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,14 +671,13 @@ Transform:
   - {fileID: 1283003175}
   - {fileID: 1384298376}
   - {fileID: 862667004}
-  - {fileID: 1712426094}
   - {fileID: 586567670}
   - {fileID: 1731527954}
   - {fileID: 849053776}
   - {fileID: 463271604}
   - {fileID: 1139346438}
-  - {fileID: 1753547755}
-  - {fileID: 1981945291}
+  - {fileID: 1909087603}
+  - {fileID: 267686099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463271603
@@ -672,6 +730,7 @@ MonoBehaviour:
   itemEnabled: 0
   targetItem: {fileID: 0}
   interactions: []
+  playerCanTalkTo: 0
 --- !u!1 &510950220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1116,21 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
+<<<<<<< Updated upstream
   interactions: []
+=======
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: You pick up the stone head in both hands. You turn the face towards
+      you, it looks familiar. You hear the word "merlin" whispered.
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  playerCanTalkTo: 0
+>>>>>>> Stashed changes
 --- !u!1 &642283155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1379,22 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
+<<<<<<< Updated upstream
   interactions: []
+=======
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: You wipe away years worth of dust and cobwebs to reveal the tapestry.
+      IT's a moth-eaten depiction of the ancient city of Albion. You mutter the words
+      "albion".
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  playerCanTalkTo: 0
+>>>>>>> Stashed changes
 --- !u!1 &862667003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,17 +1451,15 @@ MonoBehaviour:
       you begin to hear a low growl rows of sparkling teeth rush to meet you. As
       you fall back, a great serpent bursts forth coiling itself around the well;
       towering over you.
+    textToMatch: 
     itemsToDisable:
     - {fileID: 862667005}
     itemsToEnable:
     - {fileID: 463271605}
     connectionsDisable: []
     connectionsToEnable: []
-    connectionsToDisable:
-    - {fileID: 1545528626}
-    - {fileID: 1708619145}
-    - {fileID: 514679473}
-    - {fileID: 1487719570}
+    connectionsToDisable: []
+  playerCanTalkTo: 0
 --- !u!1 &905771156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,7 +1654,7 @@ GameObject:
   - component: {fileID: 1139346438}
   - component: {fileID: 1139346439}
   m_Layer: 0
-  m_Name: FerrymanTalk1
+  m_Name: Ferryman1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1606,7 +1692,26 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: a4e52ac8feae79941b845b884820ab68, type: 2}
+    response: Who wishes to seek passage?
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  - action: {fileID: 11400000, guid: fc2121c05bd602c46829d6e080dde168, type: 2}
+    response: Where do you seek?
+    textToMatch: merlin
+    itemsToDisable:
+    - {fileID: 1139346439}
+    itemsToEnable:
+    - {fileID: 1909087604}
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  playerCanTalkTo: 1
 --- !u!1 &1187715920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,7 +1803,21 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
+<<<<<<< Updated upstream
   interactions: []
+=======
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: The burning splintered trunk of a twisted tree asundered by a powerful
+      force.
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  playerCanTalkTo: 0
+>>>>>>> Stashed changes
 --- !u!1 &1384298375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,7 +1867,21 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
+<<<<<<< Updated upstream
   interactions: []
+=======
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: carved into the stone plinth of the statue you read the words, "Beyond
+      these walls the great wizard lies entwined"
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  playerCanTalkTo: 0
+>>>>>>> Stashed changes
 --- !u!1 &1431331250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,56 +2419,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2074829655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1712426093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1712426094}
-  - component: {fileID: 1712426095}
-  m_Layer: 0
-  m_Name: Ferryman
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1712426094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712426093}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 390738217}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1712426095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712426093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Ferryman
-  description: a Robed Ferryman
-  playerCanTake: 0
-  itemEnabled: 1
-  targetItem: {fileID: 0}
-  interactions: []
 --- !u!1 &1723517546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,56 +2517,7 @@ MonoBehaviour:
   itemEnabled: 0
   targetItem: {fileID: 0}
   interactions: []
---- !u!1 &1753547754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1753547755}
-  - component: {fileID: 1753547756}
-  m_Layer: 0
-  m_Name: FerrymanTalk2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1753547755
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753547754}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 390738217}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1753547756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753547754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: ferryman
-  description: A robed ferryman
-  playerCanTake: 0
-  itemEnabled: 0
-  targetItem: {fileID: 0}
-  interactions: []
+  playerCanTalkTo: 0
 --- !u!1 &1779800735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2606,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 60aea9bc619debc439522ca4cb874e0e, type: 2}
   - {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
   - {fileID: 11400000, guid: 87cb3638d83120a4c801652188f6de50, type: 2}
+  - {fileID: 11400000, guid: fc2121c05bd602c46829d6e080dde168, type: 2}
+  - {fileID: 11400000, guid: a4e52ac8feae79941b845b884820ab68, type: 2}
   introText: "A thunder crack of splintering wood wrenches you from the darkness.
     A scream of shock, heat and sweat flood onto the cold shaking ground. Reborn
     in moss and dirt you take one gasp breath of acrid smoke them another, and another.
@@ -2817,6 +2853,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868203924}
   m_CullTransparentMesh: 0
+--- !u!1 &1909087602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909087603}
+  - component: {fileID: 1909087604}
+  m_Layer: 0
+  m_Name: Ferryman2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1909087603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909087602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 390738217}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1909087604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909087602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: ferryman
+  description: a robed ferryman
+  playerCanTake: 0
+  itemEnabled: 0
+  targetItem: {fileID: 0}
+  interactions:
+  - action: {fileID: 11400000, guid: a4e52ac8feae79941b845b884820ab68, type: 2}
+    response: Where do you seek?
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  - action: {fileID: 11400000, guid: fc2121c05bd602c46829d6e080dde168, type: 2}
+    response: My time is money buddy.
+    textToMatch: albion
+    itemsToDisable:
+    - {fileID: 1909087604}
+    itemsToEnable:
+    - {fileID: 267686100}
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+  playerCanTalkTo: 1
 --- !u!1 &1913026995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,6 +3056,7 @@ MonoBehaviour:
       blow and the serpents head is cleaved from its body. Coins erupt from the severed
       neck, showering the room in gold. As the body slumps to the floor the coins
       pump forth like blood.
+    textToMatch: 
     itemsToDisable:
     - {fileID: 463271605}
     itemsToEnable:
@@ -2962,6 +3068,24 @@ MonoBehaviour:
     - {fileID: 514679473}
     - {fileID: 1487719570}
     connectionsToDisable: []
+  - action: {fileID: 11400000, guid: 87cb3638d83120a4c801652188f6de50, type: 2}
+    response: You lunge forward, The staff glows; bursting with light. One arching
+      blow and the serpents head is cleaved from its body. Coins erupt from the severed
+      neck, showering the room in gold. As the body slumps to the floor the coins
+      pump forth like blood.
+    textToMatch: 
+    itemsToDisable:
+    - {fileID: 463271605}
+    itemsToEnable:
+    - {fileID: 1731527955}
+    connectionsDisable: []
+    connectionsToEnable:
+    - {fileID: 1545528626}
+    - {fileID: 1708619145}
+    - {fileID: 514679473}
+    - {fileID: 1487719570}
+    connectionsToDisable: []
+  playerCanTalkTo: 0
 --- !u!1 &1947527495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,56 +3234,6 @@ MonoBehaviour:
   connections:
   - {fileID: 548811441}
   itemList: []
---- !u!1 &1981945290
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1981945291}
-  - component: {fileID: 1981945292}
-  m_Layer: 0
-  m_Name: FerrymanTalk3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1981945291
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981945290}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 390738217}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1981945292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981945290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: ferryman
-  description: A robed ferryman
-  playerCanTake: 0
-  itemEnabled: 0
-  targetItem: {fileID: 0}
-  interactions: []
 --- !u!1 &2028867815
 GameObject:
   m_ObjectHideFlags: 0

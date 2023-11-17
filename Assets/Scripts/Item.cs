@@ -17,12 +17,17 @@ public class Item : MonoBehaviour
 
     public Interaction[] interactions;
 
-  public bool InteractWith(GameController controller, string actionKeyword)
+    public bool playerCanTalkTo = false;
+
+  public bool InteractWith(GameController controller, string actionKeyword, string noun = "")
     {
         foreach(Interaction interaction in interactions)
         {
             if (interaction.action.Keyword == actionKeyword)
             {
+                if (noun != "" && noun.ToLower() != interaction.textToMatch.ToLower())
+                    continue;
+
                 foreach (Item disableItem in interaction.itemsToDisable)
                     disableItem.itemEnabled = false;
 
