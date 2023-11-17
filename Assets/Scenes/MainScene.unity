@@ -1052,12 +1052,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Head
+  itemName: head
   description: a smashed statue head
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: You pick up the stone head in both hands. You turn the face towards
+      you, it looks familiar. You hear the word "merlin" whispered.
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
 --- !u!1 &642283155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1314,16 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: You wipe away years worth of dust and cobwebs to reveal the tapestry.
+      IT's a moth-eaten depiction of the ancient city of Albion. You mutter the words
+      "albion".
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
 --- !u!1 &862667003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,7 +1715,15 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: The burning splintered trunk of a twisted tree asundered by a powerful
+      force.
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
 --- !u!1 &1384298375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,7 +1773,15 @@ MonoBehaviour:
   playerCanTake: 0
   itemEnabled: 1
   targetItem: {fileID: 0}
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
+    response: carved into the stone plinth of the statue you read the words, "Beyond
+      these walls the great wizard lies entwined"
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
 --- !u!1 &1431331250
 GameObject:
   m_ObjectHideFlags: 0
