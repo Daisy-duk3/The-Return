@@ -29,13 +29,13 @@ public class Location : MonoBehaviour
 
     public string GetItemsText()
     {
-        if (itemList.Count == 0) return "";           // if no items will return empty
+        if (itemList == null || itemList.Count == 0) return "";           // if no items will return empty
 
         string result = "You see ";
         bool first = true;
         foreach (Item item in itemList)
         {
-            if (item.itemEnabled)                   //will check to see if item is enabled in unity then will print the names into the game
+            if (item != null && item.itemEnabled)                   //will check to see if item is enabled in unity then will print the names into the game
             {
                 if (!first) result += " and ";      //the first one is false so all the others will have an 'and' connector
                 result += item.description;
