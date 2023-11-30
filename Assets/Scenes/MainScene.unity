@@ -388,6 +388,15 @@ MonoBehaviour:
   itemEnabled: 0
   targetItem: {fileID: 0}
   interactions:
+  - action: {fileID: 11400000, guid: f9bc038155ee46e4fbe6dde8b199dde9, type: 2}
+    response: 
+    textToMatch: coins
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+    teleportLocation: {fileID: 696964786}
   - action: {fileID: 11400000, guid: a4e52ac8feae79941b845b884820ab68, type: 2}
     response: Give me payment
     textToMatch: 
@@ -396,7 +405,10 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 1
+  playerCanGiveTo: 1
+  playerCanRead: 0
 --- !u!1 &268606350
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +591,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272847171}
   m_CullTransparentMesh: 1
+--- !u!1 &322045757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322045758}
+  - component: {fileID: 322045759}
+  m_Layer: 0
+  m_Name: Plaque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &322045758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322045757}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 390738217}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322045759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322045757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: plaque
+  description: a plaque embedded on the floor, it says something
+  playerCanTake: 0
+  itemEnabled: 1
+  targetItem: {fileID: 0}
+  interactions:
+  - action: {fileID: 11400000, guid: 64dde5e4e0353cc4687b05da86673e66, type: 2}
+    response: Level 5 Druid, Jayne has been known to venture around these areas
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsDisable: []
+    connectionsToEnable: []
+    connectionsToDisable: []
+    teleportLocation: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &330703801
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +711,8 @@ MonoBehaviour:
   - {fileID: 13525566}
   - {fileID: 735194396}
   - {fileID: 1947527496}
-  itemList: []
+  itemList:
+  - {fileID: 322045759}
 --- !u!1 &390738216
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +753,7 @@ Transform:
   - {fileID: 1139346438}
   - {fileID: 1909087603}
   - {fileID: 267686099}
+  - {fileID: 322045758}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463271603
@@ -731,6 +807,8 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   interactions: []
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &510950220
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,7 +941,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.09140263, g: 0.15124498, b: 0.24528301, a: 0}
+  m_BackGroundColor: {r: 0.08170166, g: 0.11334954, b: 0.33962262, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1002,8 +1080,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -463.45, y: -181.03378}
-  m_SizeDelta: {x: 926.9, y: 0}
+  m_AnchoredPosition: {x: -407.45, y: -416}
+  m_SizeDelta: {x: 814.9, y: 416}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &565236749
 CanvasRenderer:
@@ -1035,10 +1113,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 90d845eb329ce5443befd850806cc805, type: 3}
-    m_FontSize: 12
+    m_FontSize: 18
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
+    m_BestFit: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1049,10 +1127,7 @@ MonoBehaviour:
   m_Text: 'In the vast realm of existence, the chicken ponders: ''To cross the road
     or not to cross, that is the eternal question.'' Meanwhile, the road responds,
     ''Does the chicken seek enlightenment on the other side, or merely a snack? The
-    answers lie within, my feathery friend.In the vast realm of existence, the chicken
-    ponders: ''To cross the road or not to cross, that is the eternal question.''
-    Meanwhile, the road responds, ''Does the chicken seek enlightenment on the other
-    side, or merely a snack? The answers lie within, my feathery friend.'
+    an'
 --- !u!114 &565236751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,7 +1135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565236747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
@@ -1120,15 +1195,16 @@ MonoBehaviour:
   - action: {fileID: 11400000, guid: 6bc6eda88c18a534aaf10f42418bb338, type: 2}
     response: You pick up the stone head in both hands. You turn the face towards
       you, it looks familiar. You hear the word "merlin" whispered.
-
     textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
-
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &642283155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1464,10 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &862667003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1532,10 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &905771156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,6 +1777,7 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   - action: {fileID: 11400000, guid: fc2121c05bd602c46829d6e080dde168, type: 2}
     response: Where do you seek?
     textToMatch: merlin
@@ -1705,7 +1788,10 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 1
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1187715920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,7 +1893,10 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1384298375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,8 +1956,10 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
-
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1431331250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,7 +2148,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496056175}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 02c9322f757024443861c8d5ca38b65f, type: 3}
@@ -2465,7 +2556,7 @@ GameObject:
   - component: {fileID: 1731527954}
   - component: {fileID: 1731527955}
   m_Layer: 0
-  m_Name: coins
+  m_Name: goldencoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2498,13 +2589,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db84bc97d7de7943b73111fcc1b11f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: coins
-  description: golden coins
+  itemName: goldencoins
+  description: goldencoins
   playerCanTake: 1
   itemEnabled: 0
   targetItem: {fileID: 0}
   interactions: []
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1779800735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,6 +2688,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 87cb3638d83120a4c801652188f6de50, type: 2}
   - {fileID: 11400000, guid: fc2121c05bd602c46829d6e080dde168, type: 2}
   - {fileID: 11400000, guid: a4e52ac8feae79941b845b884820ab68, type: 2}
+  - {fileID: 11400000, guid: f9bc038155ee46e4fbe6dde8b199dde9, type: 2}
+  - {fileID: 11400000, guid: 64dde5e4e0353cc4687b05da86673e66, type: 2}
   introText: "A thunder crack of splintering wood wrenches you from the darkness.
     A scream of shock, heat and sweat flood onto the cold shaking ground. Reborn
     in moss and dirt you take one gasp breath of acrid smoke them another, and another.
@@ -2708,7 +2803,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 90d845eb329ce5443befd850806cc805, type: 3}
-    m_FontSize: 14
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
@@ -2786,8 +2881,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 93.90037}
-  m_SizeDelta: {x: 0, y: -187.8028}
+  m_AnchoredPosition: {x: 0, y: 46.655}
+  m_SizeDelta: {x: 0, y: -93.3108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868203926
 MonoBehaviour:
@@ -2898,6 +2993,7 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   - action: {fileID: 11400000, guid: fc2121c05bd602c46829d6e080dde168, type: 2}
     response: My time is money buddy.
     textToMatch: albion
@@ -2908,7 +3004,10 @@ MonoBehaviour:
     connectionsDisable: []
     connectionsToEnable: []
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 1
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1913026995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,6 +3154,7 @@ MonoBehaviour:
     - {fileID: 514679473}
     - {fileID: 1487719570}
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   - action: {fileID: 11400000, guid: 87cb3638d83120a4c801652188f6de50, type: 2}
     response: You lunge forward, The staff glows; bursting with light. One arching
       blow and the serpents head is cleaved from its body. Coins erupt from the severed
@@ -3072,7 +3172,10 @@ MonoBehaviour:
     - {fileID: 514679473}
     - {fileID: 1487719570}
     connectionsToDisable: []
+    teleportLocation: {fileID: 0}
   playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1947527495
 GameObject:
   m_ObjectHideFlags: 0

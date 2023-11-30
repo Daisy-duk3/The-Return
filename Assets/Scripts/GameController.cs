@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        currentText.text = "Nothing happens! (Use help dummy)";
+        currentText.text = "Nothing happens! (Use help)";
     }
 }
    

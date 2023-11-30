@@ -19,4 +19,6 @@ public class Interaction
     public List<Connection>connectionsToEnable = new List<Connection>();
 
     public Connection[] connectionsToDisable;
+
+    public Location teleportLocation = null;
 }
